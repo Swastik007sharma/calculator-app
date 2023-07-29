@@ -1,4 +1,6 @@
 let toggleSwitch = document.getElementsByClassName('themeSwitch')[0]
+let OutputValue = "";
+const outputElement = document.getElementById("output")
 
 function go_to_1() {
     toggleSwitch.classList.add('horizTranslate1');
@@ -59,3 +61,30 @@ function changeTheme(n) {
     /* Changing toggle Switch color */
     document.querySelector('.themeSwitch').style.backgroundColor = `var(--T${n}_ToggleKeyColor)`
 }
+
+document.querySelectorAll(".button").forEach((curr) => {
+    curr.addEventListener("click", () => {
+        OutputValue += curr.value;
+        outputElement.innerText = OutputValue;
+    }) 
+    
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+    outputElement.innerText = 0
+    OutputValue = ""
+})
+
+document.getElementById("del").addEventListener("click", () => {
+    OutputValue = OutputValue.slice(0, -1);
+    if(OutputValue == '' || OutputValue == "0"){
+        outputElement.innerText = 0;
+    }else{
+        outputElement.innerText = OutputValue;
+    }
+})
+
+document.getElementById("equall").addEventListener("click", () => {
+    OutputValue = math.evaluate(outputElement.innerText);
+    outputElement.innerText = OutputValue;
+})

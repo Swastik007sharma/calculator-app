@@ -181,9 +181,6 @@ section{
 
 #reset{
     grid-column: -3/-5;
-    height: 65px;
-    text-align: center;
-    border-radius: 8px;
     width: 100%;
 }
 
@@ -198,6 +195,9 @@ section{
     /* box-shadow: inset 0 -4px var(--T2_KeyShadow); */
     /* box-shadow: inset 0 -4px var(--T3_KeyShadow); */
     font-size: 0.7rem;
+    height: 50pt;
+    text-align: center;
+    border-radius: 8px;
     border: none;
     font-weight: inherit;
 

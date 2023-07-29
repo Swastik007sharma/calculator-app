@@ -1,89 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
 
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- displays site properly based on user's device -->
 
-		<title>Frontend Mentor | Calculator app</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-		<link rel="stylesheet" href="style.css" />
+	<title>Frontend Mentor | Calculator app</title>
 
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
+	<link rel="stylesheet" href="style.css" />
 
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
-	</head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.9.1/math.js"
+		integrity="sha512-iC7V/1gOwGXzYGJ9f860Jq9K/YrL+AsSI7k/03F98EkX1GEsP2VjWdHgWpwhinDTe+HGznwCnVdR2d/o2In9bA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-	<body>
-		<main>
-			<div class="top">
-				<p>calc</p>
-				<section>
-					<p id="theme">THEME</p>
-					<div id="buttonContainer">
-						<div class="themeSwitch"></div>
+	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	<style>
+		.attribution {
+			font-size: 11px;
+			text-align: center;
+		}
+
+		.attribution a {
+			color: hsl(228, 45%, 44%);
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<div class="top">
+			<p>calc</p>
+			<section>
+				<p id="theme">THEME</p>
+				<div id="buttonContainer">
+					<div class="themeSwitch"></div>
+				</div>
+
+				<div id="legendTextContainer">
+					<div class="legendText" onclick="go_to_1()">
+						<p>1</p>
 					</div>
-
-					<div id="legendTextContainer">
-						<div class="legendText" onclick="go_to_1()">
-							<p>1</p>
-						</div>
-						<div class="legendText" onclick="go_to_2()">
-							<p>2</p>
-						</div>
-						<div class="legendText" onclick="go_to_3()">
-							<p>3</p>
-						</div>
+					<div class="legendText" onclick="go_to_2()">
+						<p>2</p>
 					</div>
-				</section>
-			</div>
-
-			<div class="output"><span id="output">0</span></div>
-			<div class="inputPad">
-				<input class="button" type="button" value="7">
-				<input class="button" type="button" value="8">
-				<input class="button" type="button" value="9">
-				<input class="button" id="del" class type="button" value="DEL">
-				<input class="button" type="button" value="4">
-				<input class="button" type="button" value="5">
-				<input class="button" type="button" value="6">
-				<input class="button" type="button" value="+">
-				<input class="button" type="button" value="1">
-				<input class="button" type="button" value="2">
-				<input class="button" type="button" value="3">
-				<input class="button" type="button" value="-">
-				<input class="button" type="button" value=".">
-				<input class="button" type="button" value="0">
-				<input class="button" type="button" value="/">
-				<input class="button" type="button" value="x">
-				<input type="button" id ="reset" value="RESET">
-				<input type="button" id="equall" value="=">
-			</div>
-		</main>
-
-		<div class="attribution">
-			Challenge by
-			<a
-				href="https://www.frontendmentor.io?ref=challenge"
-				target="_blank"
-				>Frontend Mentor</a
-			>. Coded by <a href="#">Your Name Here</a>.
+					<div class="legendText" onclick="go_to_3()">
+						<p>3</p>
+					</div>
+				</div>
+			</section>
 		</div>
-		<script src="script.js"></script>
-	</body>
+
+		<div class="output"><span id="output">0</span></div>
+		<div class="inputPad">
+			<input class="button" type="button" value="7">
+			<input class="button" type="button" value="8">
+			<input class="button" type="button" value="9">
+			<input id="del" class type="button" value="DEL">
+			<input class="button" type="button" value="4">
+			<input class="button" type="button" value="5">
+			<input class="button" type="button" value="6">
+			<input class="button" type="button" value="+">
+			<input class="button" type="button" value="1">
+			<input class="button" type="button" value="2">
+			<input class="button" type="button" value="3">
+			<input class="button" type="button" value="-">
+			<input class="button" type="button" value=".">
+			<input class="button" type="button" value="0">
+			<input class="button" type="button" value="/">
+			<input class="button" type="button" value="x">
+			<input type="button" id="reset" value="RESET">
+			<input type="button" id="equall" value="=">
+		</div>
+	</main>
+
+	<div class="attribution">
+		Challenge by
+		<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+			href="#">Your Name Here</a>.
+	</div>
+	<script src="script.js"></script>
+</body>
+
 </html>
