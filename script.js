@@ -85,6 +85,6 @@ document.getElementById("del").addEventListener("click", () => {
 })
 
 document.getElementById("equall").addEventListener("click", () => {
-    OutputValue = math.evaluate(outputElement.innerText);
+    OutputValue = math.evaluate(outputElement.innerText.replace("x", "*"));
     outputElement.innerText = OutputValue;
 })
