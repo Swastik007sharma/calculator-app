@@ -59,7 +59,7 @@ function changeTheme(n) {
     document.getElementById('buttonContainer').style.backgroundColor = `var(--T${n}_ToggleBackgroundColor)`;
 
     /* Changing toggle Switch color */
-    document.querySelector('.themeSwitch').style.backgroundColor = `var(--T${n}_ToggleKeyColor)`
+    document.querySelector('.themeSwitch').style.backgroundColor = `var(--T${n}_ToggleKeyColor)`;
 }
 
 document.querySelectorAll(".button").forEach((curr) => {
